@@ -1,0 +1,18 @@
+version: '3'
+services:
+  app:
+    build:
+      context: https://github.com/bigpandaio/ops-exercise.git
+    ports:
+      - "3000:3000"
+    container_name: app
+    links:
+      - db
+    volumes:
+      - ./pandaimages:/opt/app/public/images
+  db:
+    build:
+      context: https://github.com/bigpandaio/ops-exercise.git#:db
+    container_name: db
+    ports:
+      - "27017:27017"
