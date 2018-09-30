@@ -4,21 +4,33 @@ Tested on Python 2.7
 
 ### Description
 
-Docker docker-compose.yml will read Dockerfile from github (https://github.com/bigpandaio/ops-exercise) and execute 
+Docker docker-compose.yml will read Dockerfile from github: 
+
+* App https://github.com/bigpandaio/ops-exercise
+
+* DB: https://github.com/bigpandaio/ops-exercise/db
+
+build images and run containers.
 
 ### How to run:
 
 1. Install dependencies
 
+```
 pip install requests
+```
 
 2. Make sh executable
 
+```
 chmpd +x flow-compose.sh
+```
 
 3. Run
 
+```
 ./flow-compose.sh
+```
 
 ### Script output:
 
