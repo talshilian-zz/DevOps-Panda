@@ -40,6 +40,6 @@ chmpd +x flow-compose.sh
 
 ### Comments:
 
-1. I'm mapping images to the folder ... instead of ... - following error correction
+1. I'm mapping images to the folder ./pandaimages instead of /opt/app/public/images - following error correction
 
 2. In addition to 500 status check, I'm using timeou of 3 sec. and fail docker on timeout
