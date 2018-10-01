@@ -18,7 +18,7 @@ def docker_down():
     print ("down docker")
     subprocess.call(["docker-compose", "down", "--rmi", "all"])
 
-def health_check():
+def check_env():
     # Check health
     # wait for docker boot up
     time.sleep(3)
@@ -31,6 +31,15 @@ def health_check():
         return 500
 
     return request.status_code
+
+def health_check():
+    status = check_env()
+    if status == 200:
+        print('Success: Url health check passed')
+    elif status == 500:
+        print('Error: Url health check failed')
+        # Stop docker if something wrong
+        #docker_down()
 
 
 def get_images():
@@ -49,12 +58,6 @@ def get_images():
 
 get_images()
 docker_up()
-status = health_check()
-if status == 200:
-    print('Success: Url health check passed')
-elif status == 500:
-    print('Error: Url health check failed')
-    # Stop docker if something wrong
-    docker_down()
+health_check()
 
 print ("Done.")
