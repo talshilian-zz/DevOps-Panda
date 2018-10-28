@@ -13,20 +13,21 @@ Docker docker-compose.yml will read Dockerfile from github:
 build images and run containers.
 
 ### How to run:
+1. use project on readable directory
 
-1. Install dependencies
+2. Install dependencies
 
 ```
 pip install requests
 ```
 
-2. Make sh executable
+3. Make sh executable
 
 ```
 chmpd +x flow-compose.sh
 ```
 
-3. Run
+4. Run
 
 ```
 ./flow-compose.sh
