@@ -24,7 +24,7 @@ pip install requests
 3. Make sh executable
 
 ```
-chmpd +x flow-compose.sh
+chmod +x flow-compose.sh
 ```
 
 4. Run
